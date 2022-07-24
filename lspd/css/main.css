@@ -134,7 +134,7 @@ ul{
 }
 #search{
     margin-top: 9vw;
-    font-size: 2.4vw;
+    font-size: 1.4vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
     border-radius: 0.15vw;
@@ -142,7 +142,7 @@ ul{
 }
 #form .button{
     font-family: 'Open Sans', sans-serif;
-    font-size: 2.4vw;
+    font-size: 1.4vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
     background: #3366ff;
@@ -169,4 +169,12 @@ ul{
 }
 #data p b.blue{
     background: #0a52c1;
+}
+@media (min-width: 768px) {
+    #search{
+        font-size: 3vw;
+    }
+    #form .button{
+        font-size: 3vw;
+    }
 }
