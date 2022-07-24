@@ -7,6 +7,9 @@ body{
     font-size: 1.4vw;
     scroll-behavior: smooth;
 }
+.air{
+    height: 12vh;
+}
 nav{
     width: 80%;
     padding: 1.2vw 10%;
