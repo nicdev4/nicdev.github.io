@@ -131,17 +131,17 @@ ul{
 }
 #search{
     margin-top: 9vw;
-    font-size: 1.4vw;
+    font-size: 2.4vw;
     box-sizing: border-box;
-    padding: 0.7vw 1.4vw;
+    padding: 0.7em 1.4em;
     border-radius: 0.15vw;
     border: 0.05vw #3366ff solid;
 }
 #form .button{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.4vw;
+    font-size: 2.4vw;
     box-sizing: border-box;
-    padding: 0.7vw 1.4vw;
+    padding: 0.7em 1.4em;
     background: #3366ff;
     color: #ffffff;
     border: 0.05vw #3366ff solid;
