@@ -56,10 +56,31 @@ ul{
     margin-left: 0;
     margin-right: auto;
     margin-top: 1.2vw;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     width: 100%;
 }
 .ul .li p{
     border-radius: 0.1em;
+}
+.ul .li .icon{
+    display: flex;
+    height: 100%;
+}
+.ul .li .icon img{
+    height:5em;
+    width: auto;
+    fill: white;
+    border-radius: 0.3em;
+    left: 1.2em;
+    margin: auto;
+    margin-left: 0;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+}
+.ul .li img{
+    width: 60%;
 }
 .ul .li p.big{
     color: #000000;
@@ -190,5 +211,11 @@ ul{
     }
     .main .section-ns h2{
         font-size: 7.2vw;
+    }
+    #data p b{
+        font-size: 3.6vw;
+    }
+    .ul .li img{
+        width: 100%;
     }
 }
