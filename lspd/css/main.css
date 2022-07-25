@@ -203,6 +203,45 @@ ul{
 #data p b.blue{
     background: #0a52c1;
 }
+.section .hidden{
+    width: 100%;
+    transition: 0.5s;
+}
+.section .opened{
+    width: 100%;
+    transition: 0.5s;
+}
+.section .opened button{
+    background: none;
+    font-size: 1vw;
+    padding: 0.8em 1.6em;
+    color: #3366ff;
+    border: 0.2em #3366ff solid;
+    box-sizing: border-box;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 30em;
+}
+.section .hidden p{
+    display: block;
+    height: 0;
+    opacity: 0;
+}
+strong{
+    font-weight: 700;
+    color: red;
+}
+.section .hidden button{
+    background: #3366ff;
+    font-size: 1vw;
+    padding: 0.8em 1.6em;
+    color: white;
+    border: 0.2em #3366ff solid;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 30em;
+}
+
 @media screen and (max-width: 1024px) {
     nav{
         display: none;
