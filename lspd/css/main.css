@@ -4,7 +4,7 @@ body{
     color: #272727;
     font-family: Calibri;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1vw;
     scroll-behavior: smooth;
 }
 .air{
@@ -47,29 +47,39 @@ ul{
     margin-left: 0;
     display: flex;
 }
+.ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: stretch;
+    align-items: stretch;
+    flex-basis: 100%;
+    order: 2;
+}
 .ul .li{
     border: 0.02vw #cecece solid;
     box-sizing: border-box;
     padding: 1.2vw;
     border-radius: 0.2vw;
     list-style: none;
-    margin-left: 0;
-    margin-right: auto;
-    margin-top: 1.2vw;
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
     width: 100%;
+    margin: auto;
+    margin-top: 0;
 }
 .ul .li p{
     border-radius: 0.1em;
 }
 .ul .li .icon{
     display: flex;
-    height: 100%;
+    left: 2em;
+    position: absolute;
+    background: white;
+    padding: 0.4em;
 }
 .ul .li .icon img{
-    height:5em;
+    height:1.2em;
     width: auto;
     fill: white;
     border-radius: 0.3em;
@@ -153,7 +163,7 @@ ul{
     border-radius: 0.2vw;
 }
 .main .section-ns h2{
-    font-size: 3.2vw;
+    font-size: 1.2vw;
 }
 #search{
     margin-top: 1.2vw;
@@ -214,6 +224,18 @@ ul{
     }
     #data p b{
         font-size: 3.6vw;
+    }
+    .ul .li{
+        width: 100%;
+    }
+    .ul .li .icon{
+        position: relative;
+        left: 0;
+        width: 100%;
+    }
+    .ul .li .icon img{
+        width: 9vw;
+        height: 9vw;
     }
     .ul .li img{
         width: 100%;
