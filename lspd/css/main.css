@@ -17,17 +17,21 @@ nav{
     position: fixed;
     z-index: 90;
     background: white;
-    border-bottom: 1px rgba(51, 102, 255, 0.29) solid;
+    filter: drop-shadow(0 0 1.6em RGBA(0,0,0,0.2));
 }
 nav ul{
     margin: auto;
     margin-right: 0;
     display: flex;
+    width: 50%;
 }
 nav ul li{
     margin: auto;
     margin-right: 0;
     list-style: none;
+}
+nav ul li a{
+    color: black;
 }
 a,input,form,button{
     font-family: 'Open Sans', sans-serif;
@@ -60,12 +64,12 @@ ul{
 .ul .li p.big{
     color: #000000;
     box-sizing: border-box;
-    padding: 1.2vw;
+    padding: 1.2em;
     line-height: 2.4em;
 }
 .ul .li p.little{
     box-sizing: border-box;
-    padding: 0.025vw 0.3vw;
+    padding: 0.025em 0.3em;
     width: auto;
     margin-top: 0.6vw;
 }
@@ -80,12 +84,10 @@ ul{
 .ul .li p.lightpurple{
     background: #f6e0fc;
     color: #e033ff;
-    border: 0.05vw #e033ff solid;
 }
 .ul .li p.lightred{
     background: #f8e3e3;
     color: #ff3333;
-    border: 0.05vw #ff3333 solid;
 }
 .ul .li p.red{
     background: #ee2f2f;
@@ -133,8 +135,8 @@ ul{
     font-size: 3.2vw;
 }
 #search{
-    margin-top: 9vw;
-    font-size: 1.4vw;
+    margin-top: 1.2vw;
+    font-size: 1.2vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
     border-radius: 0.15vw;
@@ -142,7 +144,7 @@ ul{
 }
 #form .button{
     font-family: 'Open Sans', sans-serif;
-    font-size: 1.4vw;
+    font-size: 1.2vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
     background: #3366ff;
@@ -156,7 +158,7 @@ ul{
     border-radius: 0.5vw;
     background: black;
     box-sizing: border-box;
-    padding: 0.15vw 0.4vw;
+    padding: 0.15em 0.4em;
 }
 #data p b.red{
     background: #b40600;
@@ -170,11 +172,23 @@ ul{
 #data p b.blue{
     background: #0a52c1;
 }
-@media (min-width: 768px) {
+@media screen and (max-width: 1024px) {
+    nav{
+        display: none;
+    }
+    .section-ns .line{
+        font-size: 4vw;
+    }
+    body{
+        font-size: 4vw;
+    }
     #search{
-        font-size: 3vw;
+        font-size: 3.4vw;
     }
     #form .button{
-        font-size: 3vw;
+        font-size: 3.4vw;
+    }
+    .main .section-ns h2{
+        font-size: 7.2vw;
     }
 }
