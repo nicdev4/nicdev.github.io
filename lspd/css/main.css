@@ -1,37 +1,173 @@
 body{
     overflow-x: hidden;
     margin: 0;
-    color: #272727;
+    background-color: rgb(39, 39, 39);
+    background-size: 3%;
+    background-repeat: repeat;
+    color: white;
     font-family: Calibri;
     font-family: 'Open Sans', sans-serif;
-    font-size: 1vw;
+    font-size: 1.2vw;
     scroll-behavior: smooth;
-}
-.air{
-    height: 12vh;
 }
 nav{
     width: 80%;
-    padding: 1.2vw 10%;
+    padding: 2vw 10% 0 10%;
+    height: 3vw;
     display: flex;
     position: fixed;
-    z-index: 90;
-    background: white;
-    filter: drop-shadow(0 0 1.6em RGBA(0,0,0,0.2));
+    pointer-events: none;
+    z-index: 900;
+    transition: 0.8s;
 }
-nav ul{
+nav b{
     margin: auto;
-    margin-right: 0;
+    margin-left: 0;
+    color: #9bb1ff;
+    filter: drop-shadow(0 0 0.4em #9bb1ff);
+}
+header{
+    z-index: 5;
+    height: 100vh;
+    width: 80%;
+    padding: 0vw 10%;
     display: flex;
-    width: 50%;
+    background: rgb(12, 29, 49);
+    background: linear-gradient(60deg, rgba(0,99,255,0) 0%, rgba(8,122,219,0.125) 100%);
+    background-position: center right;
 }
-nav ul li{
+header .image{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+header .image img{
     margin: auto;
-    margin-right: 0;
-    list-style: none;
+    margin-right: -25vw;
+    margin-top: -5vw;
+    width: 75vw;
+    z-index: 2;
+    opacity: 1;
+    filter: blur(0.2em);
+    transition: all 0.2s ease;
 }
-nav ul li a{
-    color: black;
+header .imagew{
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+}
+header .imagew img{
+    margin: auto;
+    width: 100vw;
+    z-index: 1;
+    opacity: 0.8;
+    filter: blur(0.2em);
+}
+header .align{
+    width: 100%;
+    padding-right: 10%;
+    margin: auto;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+header h1{
+    font-size: 2.4vw;
+    width: 60%;
+}
+header h1 b{
+    color: #b9c9ff;
+}
+header p{
+    margin-top: 0.4vw;
+    font-size: 1.4vw;
+    width: 70%;
+    color: rgba(181, 213, 243, 0.67);
+}
+header a.button{
+    font-size: 1.2vw;
+    background: #9bb1ff;
+    color: #1e2a38;
+    padding: 0.8em 1.8em;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.2em;
+    margin-top: 0.4vw;
+    display: block;
+    width: max-content;
+    text-align: center;
+    box-shadow: 0 0 1em rgba(167, 189, 255, 0.31);
+    transition: 0.5s;
+}
+header a.button:hover{
+    box-shadow: 0 0 3em rgba(167, 189, 255, 0.31);
+}
+header div.tag{
+    width: max-content;
+    display: flex;
+    background: rgba(139, 165, 253, 0.16);
+    border-radius: 30em;
+    padding-right: 1.2em;
+}
+header .tag.green{
+    background: rgba(182, 246, 87, 0.45);
+}
+header .tag.green .icon{
+    background: rgba(142, 250, 17, 0.44);
+}
+header .tag.green .icon i{
+    color: #336f06;
+}
+header .tag.green .text{
+    color: #256c04;
+}
+header .tag .icon{
+    display: flex;
+    padding: 0.6em;
+    width: 1.6em;
+    height: 1.6em;
+    background: rgba(102, 142, 255, 0.35);
+    border-radius: 30em;
+}
+header .tag .icon i{
+    margin: auto;
+    color: #a3b9ff;
+}
+header .tag .text{
+    padding: 0.6em;
+    color: #a7beff;
+}
+header .line{
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: auto;
+}
+header .line text{
+    margin: auto;
+    margin-left: 2.4vw;
+    color: rgba(255, 255, 255, 0.36);
+}
+header .line.bottom{
+    margin-top: 24vh;
+}
+header .line.top{
+    margin: auto;
+    margin-top: 0;
 }
 a,input,form,button{
     font-family: 'Open Sans', sans-serif;
@@ -39,7 +175,7 @@ a,input,form,button{
     color: #272727;
 }
 a{
-    color: #3366ff;
+    color: #9bb1ff;
 }
 ul{
     width: 100%;
@@ -51,35 +187,49 @@ ul{
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    align-content: stretch;
-    align-items: stretch;
-    flex-basis: 100%;
-    order: 2;
 }
 .ul .li{
-    border: 0.02vw #cecece solid;
-    box-sizing: border-box;
-    padding: 1.2vw;
+    background: rgb(12, 29, 49);
+    background: linear-gradient(-60deg, rgba(0,99,255,0) 0%, rgba(159, 204, 255, 0.05) 100%);
     border-radius: 0.2vw;
-    list-style: none;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
+    height: 15vw;
     margin: auto;
-    margin-top: 0;
+    margin-top: 1.4vw;
+    margin-left: 0;
+    align-content: space-between;
+}
+.ul .li .text{
+    margin: auto;
+    margin-left: 1.4vw;
+    width: 80%;
+    font-size: 1.4vw;
+    color: #cdd9ff;
+    font-weight: 400;
+    padding-left: 1.8vw;
+    z-index: 4;
 }
 .ul .li p{
     border-radius: 0.1em;
+    margin: auto;
 }
 .ul .li .icon{
     display: flex;
-    left: 2em;
-    position: absolute;
-    background: white;
-    padding: 0.4em;
+    opacity: 0.1;
+    font-size: 14vw;
+    color: #cdd9ff;
+    overflow: hidden;
+    text-align: right;
+    font-weight: 700;
+    padding-left: 1.6vw;
+}
+.ul .li .icon b{
+    margin: auto;
 }
 .ul .li .icon img{
-    height:1.2em;
+    height:9em;
     width: auto;
     fill: white;
     border-radius: 0.3em;
@@ -88,59 +238,66 @@ ul{
     margin-left: 0;
     flex-wrap: wrap;
     flex-flow: wrap;
+    z-index: 2;
 }
 .ul .li img{
     width: 60%;
 }
 .ul .li p.big{
-    color: #000000;
+    color: #9bb1ff;
     box-sizing: border-box;
     padding: 1.2em;
     line-height: 2.4em;
+    margin-top: 1.2vw;
+    margin-bottom: 1.2vw;
 }
 .ul .li p.little{
     box-sizing: border-box;
     padding: 0.025em 0.3em;
     width: auto;
-    margin-top: 0.6vw;
+    margin-top: 1.2vw;
+    margin-bottom: 1.2vw;
 }
 .ul .li p.lightblue{
     background: #d2dbfa;
     color: #3366ff;
 }
 .ul .li p.white{
-    border: 0.05vw rgba(0, 0, 0, 0.41) solid;
-    color: rgba(4, 4, 5, 0.71);
+    border-bottom: 0.08em #9bb1ff solid;
+    background: rgba(155, 177, 255, 0.05);
+    color: #9bb1ff;
 }
 .ul .li p.lightpurple{
-    background: #f6e0fc;
-    color: #e033ff;
+    background: rgba(173, 127, 243, 0.08);
+    border-bottom: 0.08em #c786fa solid;
+    color: #c786fa;
 }
 .ul .li p.lightred{
-    background: #f8e3e3;
-    color: #ff3333;
+    background: rgba(255, 186, 186, 0.11);
+    border-bottom: 0.08em #ff7d7d solid;
+    color: #ff7d7d;
 }
 .ul .li p.red{
-    background: #ee2f2f;
-    color: #fac1c1;
+    background: rgba(255, 186, 186, 0.11);
+    color: #ff7d7d;
 }
 .main{
     width: 80vw;
     padding: 2.5vw 10vw;
     min-height: 80vw;
+    height: auto;
     display: flex;
 }
 .main .align{
     width: 100%;
 }
 .main .section{
+    display: block;
     width: 100%;
     margin: auto;
-    min-height: 240px;
 }
 .main .section .line{
     width: 96%;
-    padding: 1vw 2%;
     background: rgba(255, 255, 255, 0.09);
     margin-top: 1.2vw;
     border-radius: 0.2vw;
@@ -149,45 +306,74 @@ ul{
     width: 100%;
     margin: auto;
     box-sizing: border-box;
-    padding: 4.8vw;
     filter: drop-shadow(0 0 24px RGBA(0,0,0,0.2));
-    background: white;
     display: flex;
     flex-direction: column;
 }
 .main .section-ns .line{
     width: 96%;
-    padding: 1.2vw 2%;
-    background: rgba(255, 255, 255, 0.09);
     margin-top: 1.2vw;
     border-radius: 0.2vw;
 }
 .main .section-ns h2{
-    font-size: 1.2vw;
+    font-size: 2.4vw;
+    color: #9bb1ff;
 }
+#data{
+    width: 100%;
+    padding: 0;
+    text-align: justify;
+}
+#data p{
+    display: block;
+    width: 100%;
+    padding: 0;
+}
+
 #search{
-    margin-top: 1.2vw;
+    margin-top: 2.4vw;
     font-size: 1.2vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
     border-radius: 0.15vw;
-    border: 0.05vw #3366ff solid;
+    background: none;
+    color: #9bb1ff;
+    border: 0.05vw #9bb1ff solid;
+}
+.buttons{
+    margin-top: 1.2vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+.buttons button{
+    width: available;
+    border: none;
+    color: #9bb1ff;
+    background: rgba(155, 177, 255, 0.11);
+    padding: 0.6em 1.2em;
+    border-radius: 0.2em;
+    margin: auto;
+    margin-top: 1vw;
+    margin-left: 0;
 }
 #form .button{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2vw;
     box-sizing: border-box;
     padding: 0.7em 1.4em;
-    background: #3366ff;
-    color: #ffffff;
-    border: 0.05vw #3366ff solid;
+    background: rgba(155, 177, 255, 0.18);
+    color: #9bb1ff;
+    border: 0.05vw rgba(155, 177, 255, 0.31) solid;
     border-radius: 0.15vw;
 }
 #data p b{
     color: white;
     font-size: 1.2vw;
     border-radius: 0.5vw;
-    background: black;
+    background: rgba(0, 0, 0, 0);
     box-sizing: border-box;
     padding: 0.15em 0.4em;
 }
@@ -202,6 +388,23 @@ ul{
 }
 #data p b.blue{
     background: #0a52c1;
+}
+#ss{
+    margin-top: 2.4vw;
+    display: block;
+    padding-top: 6vw;
+    padding-bottom: 6vw;
+    width: 100%;
+}
+#ss h2{
+    font-size: 2.4vw;
+    color: #9bb1ff;
+}
+#ss p{
+    margin-top: 1.2vw;
+    width: 50%;
+    color: rgba(255, 255, 255, 0.59);
+    font-size: 1.2vw;
 }
 .section .hidden{
     width: 100%;
@@ -241,15 +444,132 @@ strong{
     font-family: 'Open Sans', sans-serif;
     border-radius: 30em;
 }
-
+#ugon{
+    display: flex;
+    flex-direction: column;
+    padding: 5vw 0 5vw 0;
+    height: 150vw;
+    max-height: available;
+}
+#ugon .ul{
+    display: flex;
+    flex-direction: column;
+}
+#ugon .ul .li{
+    padding: 0;
+    display: block;
+    background: none;
+}
+#ugon .ul{
+    padding: 0;
+    background: none;
+}
+#ugon h2{
+    font-size: 2.4vw;
+    color: #9bb1ff;
+}
 @media screen and (max-width: 1024px) {
-    nav{
-        display: none;
-    }
-    .section-ns .line{
+    body{
         font-size: 4vw;
     }
-    body{
+    nav{
+        height: 7vw;
+        z-index: 999;
+    }
+    nav b{
+        margin: auto;
+    }
+    header{
+        width: 80vw;
+        height: 100vh;
+    }
+    header .align{
+        width: 100%;
+        padding: 0;
+    }
+    #authors{
+        margin: auto;
+        margin-top: 2.4vw;
+        padding: 0;
+    }
+    header h1{
+        font-size: 6.5vw;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    header p{
+        font-size: 3.5vw;
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    header .line{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    header .line .tag{
+        margin: auto;
+    }
+    header .line .button{
+        margin: auto;
+    }
+    header .line text{
+        width: 60%;
+        padding: 0 20%;
+        color: rgba(176, 199, 255, 0.23);
+        margin-top: 5.4vw;
+        font-size: 3vw;
+        text-align: center;
+    }
+    header a.button{
+        font-size: 3.5vw;
+    }
+    header .image{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    header .image img{
+        transform: rotate(3deg);
+        margin: auto;
+        margin-right: -25vw;
+        margin-top: -5vw;
+        height: 100vh;
+        width: auto;
+        z-index: 2;
+        opacity: 1;
+        display: none;
+        filter: blur(0.2em);
+    }
+    header .imagew{
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow: hidden;
+    }
+    header .imagew img{
+        margin: auto;
+        height: 100vh;
+        width: auto;
+        margin-left: -50vw;
+        z-index: 1;
+        opacity: 0.5;
+        filter: blur(0.2em);
+    }
+    .section-ns .line{
         font-size: 4vw;
     }
     #search{
@@ -266,11 +586,17 @@ strong{
     }
     .ul .li{
         width: 100%;
+        height: auto;
     }
     .ul .li .icon{
-        position: relative;
-        left: 0;
-        width: 100%;
+        display: none;
+    }
+    .ul .li .text{
+        padding: 2.4vw;
+        width: 80%;
+        height: auto;
+        box-sizing: border-box;
+        font-size: 3.6vw;
     }
     .ul .li .icon img{
         width: 9vw;
@@ -278,5 +604,24 @@ strong{
     }
     .ul .li img{
         width: 100%;
+    }
+    #ss h2{
+        font-size: 7vw;
+    }
+    #ss p{
+        font-size: 4vw;
+        width: 100%;
+    }
+    #ugon{
+        height: auto;
+    }
+    #ugon h2{
+        font-size: 7vw;
+    }
+    #ugon p{
+        font-size: 4vw;
+    }
+    #ugon .p.big{
+        line-height: 1.8em;
     }
 }
