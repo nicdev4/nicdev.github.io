@@ -13,6 +13,7 @@ body{
 .hidden{
     opacity: 0;
     height: 0;
+    display: none;
 }
 button {
     -webkit-appearance: button;
