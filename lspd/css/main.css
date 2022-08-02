@@ -10,6 +10,18 @@ body{
     font-size: 1.2vw;
     scroll-behavior: smooth;
 }
+.hidden{
+    opacity: 0;
+    height: 0;
+}
+button {
+    -webkit-appearance: button;
+    cursor: pointer;
+    font: inherit;
+    overflow: visible;
+    text-transform: none;
+    padding:0;
+}
 nav{
     width: 80%;
     padding: 2vw 10% 0 10%;
@@ -23,8 +35,22 @@ nav{
 nav b{
     margin: auto;
     margin-left: 0;
+    padding: 0;
     color: #9bb1ff;
     filter: drop-shadow(0 0 0.4em #9bb1ff);
+}
+nav .items{
+    width: auto;
+    margin: auto;
+    margin-right: 0;
+    pointer-events: all;
+}
+nav .items .item a{
+    pointer-events: all;
+    padding: 0.3em 0.6em;
+    background: #9bb1ff;
+    color: #1d2231;
+    border-radius: 0.15em;
 }
 header{
     z-index: 5;
@@ -182,6 +208,46 @@ ul{
     margin: 0;
     margin-left: 0;
     display: flex;
+}
+button.little{
+    background: none;
+    border: none;
+    padding: 0.5em 0.9em;
+    border-radius: 0.2em;
+    background: #9bb1ff;
+    color: #2a3047;
+}
+#codes{
+    transition: 1.5s;
+}
+.table{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.table .line{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.table .line.head .row{
+    background: linear-gradient(30deg, rgba(0,99,255,0) 0%, rgba(159, 204, 255, 0.05) 100%);
+    color: #9bb1ff;
+}
+.table .line .row{
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: row;
+    height: 100%;
+    max-height: 5vw;
+    margin: 0.2vw;
+    padding: 0.3em 0.8em;
+}
+.table .line .row.w30{
+    width: 30%;
+}
+.table .line .row.w70{
+    width: 70%;
 }
 .ul{
     display: flex;
@@ -360,6 +426,10 @@ ul{
     margin-left: 0;
     font-size: 1.2vw;
 }
+.buttons button.red{
+    color: #ff9b9b;
+    background: rgba(255, 155, 155, 0.11);
+}
 #form .button{
     font-family: 'Open Sans', sans-serif;
     font-size: 1.2vw;
@@ -478,6 +548,9 @@ strong{
         z-index: 999;
     }
     nav b{
+        margin: auto;
+    }
+    nav .items{
         margin: auto;
     }
     header{
@@ -624,5 +697,11 @@ strong{
     }
     #ugon .p.big{
         line-height: 1.8em;
+    }
+    .buttons button{
+        font-size: 3vw;
+    }
+    .table .line .row{
+        max-height: 30vw;
     }
 }

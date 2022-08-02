@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Памятка</title>
+    <link rel="icon" type="image/png" href="images/logo.png"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width; initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <script>
+        AOS.init({
+            once: true,
+        });
+        function o(cl) {
+            el1 = $('#'+cl);
+            el1.toggleClass("hidden");
+            el1.toggleClass("opened");
+        }
+    </script>
+    <nav id="nav">
+        <b>LSPD памятка</b>
+        <div class="items">
+            <div class="item">
+                <a href="index.html">Главная</a>
+            </div>
+        </div>
+    </nav>
+    <script>
+        let nav = document.getElementById("nav");
+        window.addEventListener('scroll', function () {
+            if(window.scrollY > 0){
+                nav.style.transform = 'translate(0,-10vw)';
+            } else {
+                nav.style.transform = 'translate(0,0)';
+            }
+        });
+    </script>
+    <header>
+        <div class="align">
+            <div class="line top">
+                <div class="tag"><div class="icon"><i class="fa fa-gavel" aria-hidden="true"></i></div><div class="text">Лучшая памятка</div></div>
+            </div>
+            <h1>Удобная упрощённая памятка для <b>LSPD & FIB</b></h1>
+            <p>Представляем для вас упрощённую памятку для правоохранительных органов с поиском по статьям УК, АК и ДК.</p>
+            <div class="line" style="margin-top: 0.8vw"><a class="button" href="#ugon">Читать далее</a> <text id="authors">By Patrick Wainwright</text></div>
+            <script>
+                let authors = ['Patrick Wainwright', 'Broke Wainwright', 'Chaos Wainwright', 'Ryan Clapton', 'Kudaibergen Mamurov'];
+                let i = 0;
+                window.setInterval(function () {
+                    document.getElementById("authors").innerHTML = "By "+authors[i];
+                    if(i+1 >= authors.length){
+                        i = 0;
+                    } else {
+                        i = i+1;
+                    }
+                }, 2500);
+            </script>
+        </div>
+        <div class="image">
+            <img id="parallax" src="images/header.png"/>
+        </div>
+        <script>
+            let bg = document.getElementById("parallax");
+            document.addEventListener('mousemove', function (event) {
+                let x = event.clientX/window.innerWidth;
+                let y = event.clientY/window.innerHeight;
+                bg.style.transform = 'translate(-' + x * 50 + 'px, -' + y * 50 + 'px)';
+            });
+        </script>
+        <div class="imagew">
+            <img src="images/header-bg.svg"/>
+        </div>
+    </header>
+    <div class="main">
+            <div id="ugon" class="section">
+                <h2>Порядок действий на угонке.</h2>
+                <div class="ul">
+                    <p>
+                        Когда вам приходит уведомление об угоне, вам необходимо отыграть данную ситуацию от начала до конца.
+                    </p>
+                    <div class="li">
+                        Когда вы нашли угнанный автомобиль, вы должны в мегафон попросить водителя остановить тс и прижаться к обочине.
+                        <p class="big white">G → Мегафон → LSPD 1/2</p>
+                        <img src="images/Screenshot_1.png"/>
+                        Или же
+                        <p class="big lightred">/m Прижмитесь к обочине и заглушите двигатель. В случае неповиновения мы откроем огонь.</p>
+                        Если водитель не останавливается и пытается скрыться, то вы можете открыть огонь по автомобилю и начать погоню.
+                        <p class="little red">Перед тем, как открыть огонь, нужно проиграть мегафон два раза.</p>
+                        Когда водитель остановился, необходимо проверить транспортное средство.
+                        Отыграйте в биндере/голосом следующие действия:
+
+                        Представьтесь и покажите свой жетон/удостоверение/бейджик.
+                        <p class="big lightpurple">
+                            /me достал(а) КПК из заднего кармана
+                            /do КПК в руках
+                            /me включил(а) КПК и зашел(ла) в полицейскую базу данных зарегистрированных автомобилей
+                            /do Номера скручены?
+                        </p>
+                        Если водитель отвечает "Нет.", отыграйте следующие действия:
+                        <p class="big lightpurple">/me посмотрел(а) на номерной знак автомобиля и вбил(а) его в базу данных</br>
+                        /do Через некоторое время база данных выдала всю информацию касательно автомобиля.</br>
+                        /me внимательно ознакомился(лась) с информацией и убрал(а) КПК в задний карман</p>
+                        После этого в голосовой чат сообщите водителю, что автомобиль объявлен в угон и надевайте на него наручники.
+                        Начинайте проводить <a href="#proc">Процессуальные действия.</a>
+
+                        Если водитель отвечает "Да.", то для начала спросите у него в /b, есть ли у него СС, если СС есть, попросите ссылку. Если СС нету, то вызовите администратора или попросите откатить ответ и ответить снова.
+                        <p class="big lightpurple">
+                            /me открыл(а) капот автомобиля </br>
+                            /me осмотрел(а) подкопотное пространство авто </br>
+                            /me посмотрел(а) на VIN номер и вбил(а) его в базу данных </br>
+                            /me посмотрел(а) на код двигателя и вбил(а) его в базу данных </br>
+                            /do База данных выдала всю информацию об автомобиле. </br>
+                            /me внимательно ознакомился(лась) с ниформацией с экрана </br>
+                            /me заблокировал(а) и убрал(а) КПК в карман 
+                        </p>
+                        После этого в голосовой чат сообщите водителю, что автомобиль объявлен в угон и надевайте на него наручники.
+                        Начинайте проводить <a href="#proc">Процессуальные действия.</a>
+
+                        Также бывают случаи, когда люди возят угнанные машины внутри фургона. Если вы видите метку на фургоне, то вам нужно отыграть, что вы нашли машину. Для этого:
+                        <p class="big lightpurple">
+                            /me достал(а) КПК из заднего кармана и зашлел(ла) в реестр угнанных автомобилей</br>
+                            /me перешел(а) на вкладку "GPS-трекинг" и начал(а) поиск машины</br>
+                            /do Через некоторое время КПК выдал информацию о местоположении угнанного автомобиля.</br>
+                            /me ознакомился(лась) с информацией в КПК, после чего заблокировал(а) его и убрал(а) в задний карман</br>
+                        </p>
+                        После этого можете просить открыть машину и показать, что находится внутри. Далее проверяйте ТС начиная с самого начала.
+                        <b>Статья за угон - УК 10.7</b>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
