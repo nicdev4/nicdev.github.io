@@ -11,9 +11,8 @@ body{
     scroll-behavior: smooth;
 }
 .hidden{
-    opacity: 0;
-    height: 0;
-    display: none;
+    height: 0px;
+    overflow: hidden;
 }
 button {
     -webkit-appearance: button;
