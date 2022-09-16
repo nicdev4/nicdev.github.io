@@ -2,7 +2,7 @@ body{
     margin: 0;
     background: #292827;
     color: white;
-        font-family: Tahoma;
+    font-family: 'Open Sans', sans-serif;
 }
 a{
     text-decoration: none;
