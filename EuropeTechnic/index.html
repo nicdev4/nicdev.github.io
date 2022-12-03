@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="fonts/stylesheet.css"/>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
+    <link type="text/css" rel="stylesheet" href="css/font-awesome.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <title>Title</title>
+</head>
+<body>
+    <nav>
+
+    </nav>
+    <header>
+        <div class="container">
+            <h1>Привезём любую технику <span>из Европы</span> по вашему заказу!</h1>
+            <p>Какое-то душещипательное описание, которое заставит каждого заказать технику из Европы.</p>
+            <a class="button" href="#order">Сделать заказ</a>
+        </div>
+    </header>
+    <div id="desc" class="description">
+        <div class="align">
+            <h2>Привозим огромное количество техники от         разных производтелей</h2>
+            <div class="list">
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Телефоны, планшеты
+                </div>
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Смарт-часы, фитнес-трекеры
+                </div>
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Ноутбуки, компьютеры
+                </div>
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Комплектующие к ноутбукам, компьютерам
+                </div>
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Малогабаритная кухонная техника
+                </div>
+                <div class="element">
+                    <i class="fa fa-check" aria-hidden="true"></i> Малогабаритная бытовая техника
+                </div>
+            </div>
+            <div class="desc-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/Apple_logo_black.svg.png"/><img src="img/1280px-Pixel_wordmark.svg.png"/><img src="img/Nvidia_logo.svg.png"/></div>
+                    <div class="swiper-slide"><img src="img/AMD_Logo.svg.png"/><img src="img/Intel_logo_(2006-2020).svg.png"/><img src="img/Samsung_Logo.svg.png"/></div>
+                    <div class="swiper-slide"><img src="img/Canon_logo_vector.png"/><img src="img/GoPro-Logo-PNG-Isolated-Image.png"/><img src="img/Sony-Logo.png"/></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const swiper = new Swiper('.desc-swiper', {
+            direction: 'horizontal',
+            loop: true,
+        });
+        window.setInterval(function (){
+            swiper.slideNext(500);
+        }, 5500, 3500);
+    </script>
+    <div id="whyus">
+        <div class="align">
+            <h2>Нас выбирает множество людей!</h2>
+            <p>Мы работаем на рынке не так давно, но уже успели зарекомендовать себя как надежный продавец. Сотни наших клиентов остались довольны.</p>
+            <div class="list">
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Большой выбор техники</div>
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Присутствует новая и Б/У техника</div>
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Надежные поставщики из Европы</div>
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Возможна оплата картами рассрочки</div>
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Приятные цены</div>
+                <div class="element"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>  Скидки и акции</div>
+            </div>
+        </div>
+    </div>
+    <div id="order">
+        <div class="rows">
+            <div class="row">
+                <h2>Онлайн-заявка на звонок</h2>
+                <p>Сделайте предзаказ прямо сейчас и получите скидку на следующий заказ!</p>
+                <p>Или воспользуйтесь онлайн чатом.</p>
+            </div>
+            <div class="row">
+                <div class="container">
+                    <h3>Заявка на звонок</h3>
+                    <form>
+                        <p><i class="fa fa-user" aria-hidden="true"></i> Имя</p>
+                        <input type="text">
+                        <p><i class="fa fa-phone" aria-hidden="true"></i> Номер телефона</p>
+                        <input value="+375" type="text" id="phone">
+                        <p></p>
+                        <button class="button" id="send">Оставить заявку</button>
+                        <script type="text/javascript">
+                            let button = document.getElementById("send");
+                            let phone = document.getElementById("phone");
+                            button.addEventListener('click', function (){
+                                let val = phone.value;
+                                if(val.startsWith("+375") && val.length == 13){
+                                } else {
+                                        alert("Неверный номер телефона");
+                                }
+                            });
+                        </script>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="rows">
+            <div class="row centeredtext">
+                <b>EuropeTechnic 2022</b>
+                <p>support@europetechnic.by</p>
+                <div class="links">
+                    <a>
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                    <a>
+                        <i class="fa fa-telegram" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

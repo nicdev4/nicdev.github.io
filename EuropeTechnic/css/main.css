@@ -1,0 +1,342 @@
+html{
+    scroll-behavior: smooth;
+    width: 100vw;
+    height: 100vh;
+}
+body{
+    font-family: 'Aeroport';
+    margin: 0;
+    font-size: 1.2vw;
+    overflow-x: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+.list{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.list .element{
+    width: 50%;
+    font-size: 1.2vw;
+    margin-top: 1.2vw;
+}
+.list .element i{
+    margin-right: 1.2vw;
+    color: #3f90ff;
+}
+.button{
+    text-decoration: none;
+    color: white;
+    background: linear-gradient(90deg, #3f90ff, #3fbcff);
+    padding: 0.8em 1.4em;
+    border-radius: 0.2em;
+    width: max-content;
+    transition: 0.2s;
+    border: none;
+    font-family: 'Aeroport';
+}
+.button:hover{
+    transform: translateY(-0.2em);
+}
+.swiper{
+    width: 100%;
+    height: auto;
+    min-height: 15vw;
+}
+header{
+    display: flex;
+    width: 80vw;
+    padding: 5vh 10vw;
+    height: 80vh;
+    background: linear-gradient(RGBA(0,0,0,0.7),RGBA(0,0,0,0.8)), url("../img/header-background.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+}
+header .container{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+header .button{
+    margin: auto;
+}
+h1{
+    font-size: 3.6vw;
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+h1 span{
+    color: #8fd7ff;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    line-height: 0;
+    background: linear-gradient(90deg, #3fbcff, #623fff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+header p{
+    width: 100%;
+    text-align: center;
+    opacity: 0.8;
+    width: 100%;
+}
+.description{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 10vh 10vw;
+    min-height: 80vh;
+    height: auto;
+    background: white;
+    background-attachment: fixed;
+    color: #232323;
+}
+.description{
+    font-size: 1.8vw;
+    overflow: hidden;
+}
+.description .align{
+    margin: auto;
+    width: 100%;
+}
+.description .desc-swiper .swiper-slide{
+    display: flex;
+    flex-direction: row;
+    margin-top: 3.6vw;
+    overflow: hidden;
+}
+.description .desc-swiper .swiper-slide img{
+    width: 7vw;
+    margin: auto;
+    pointer-events: none;
+}
+#whyus{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 10vh 15vw;
+    height: 30vw;
+    background: #fdfeff;
+    background-attachment: fixed;
+    color: #232323;
+}
+#whyus .container{
+    margin: auto;
+}
+#whyus h2{
+    font-size: 2.4vw;
+    margin-bottom: 1.2vw;
+}
+#whyus p{
+    width: 70%;
+    text-align: left;
+    opacity: 0.8;
+    font-size: 1.2vw;
+}
+#order{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 10vh 10vw;
+    min-height: 80vh;
+    height: auto;
+    background: linear-gradient(rgba(63, 188, 255, 0.7), #3f90ff), url("../img/orderbg.jpeg");
+    backdrop-filter: blur(2.4vw);
+    background-size: cover;
+    background-attachment: fixed;
+    color: #232323;
+}
+#order h2{
+    font-size: 2.4vw;
+    margin-bottom: 1.2vw;
+    color: white;
+}
+#order p{
+    width: 70%;
+    text-align: left;
+    opacity: 0.8;
+    font-size: 1.2vw;
+    color: white;
+}
+#order .rows{
+    display: flex;
+    width: 100%;
+    margin: auto;
+    flex-direction: row;
+}
+#order .rows .row{
+    width: 100%;
+    margin: auto;
+}
+#order .container{
+    width: 100%;
+    background: rgb(255, 255, 255);
+    min-height: 20vw;
+    border-radius: 0.8vw;
+    height: available;
+    box-shadow: 0 0 2.4vw 0.05vw RGBA(0,0,0,0.1);
+    box-sizing: border-box;
+    padding: 2vw 5vw;
+}
+#order .container h3{
+    font-size: 1.6vw;
+}
+#order .container p{
+    color: #444444;
+    width: 100%;
+}
+#order .container input[type=text]{
+    border: none;
+    border-bottom: 0.2vw #3fbcff solid;
+    height: 2.4vw;
+    width: 40%;
+    outline: none;
+    transition: 0.4s;
+}
+#order .container input[type=text]:focus{
+    border: none;
+    border-bottom: 0.2vw #a9e1ff solid;
+    height: 2.4vw;
+    width: 40%;
+}
+footer{
+    display: flex;
+    flex-direction: column;
+    width: 80vw;
+    padding: 6vh 10vw;
+    height: min-content;
+}
+footer .rows{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+footer .rows .row{
+    width: auto;
+    margin: auto;
+}
+footer .rows .row b{
+    color: #3f90ff;
+}
+footer .rows .row .links{
+    width: 100%;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+footer .rows .row .links a{
+    margin: auto;
+    font-size: 1.6vw;
+    background: linear-gradient(90deg, #3f6cff,#3f90ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+footer .rows .row.centeredtext{
+    width: auto;
+    margin: auto;
+    text-align: center;
+}
+@media only screen and (max-width: 1024px) {
+    header{
+        height: 100vh;
+        overflow: hidden;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 15vw 5vw;
+    }
+    header h1{
+        display: block;
+        font-size: 7.4vw;
+        padding: 0;
+        width: 100%;
+    }
+    header p{
+        font-size: 4.2vw;
+    }
+    header .button{
+        font-size: 4.2vw;
+    }
+    .description{
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 15vw 5vw;
+        height: auto;
+        overflow: hidden;
+    }
+    .description h2{
+        font-size: 7.4vw;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .list .element{
+        font-size: 4.2vw;
+        width: 100%;
+        margin-top: 3vw;
+        text-align: center;
+    }
+    .description .desc-swiper{
+        margin-top: 15vw;
+    }
+    .description .desc-swiper .swiper-slide img{
+        width: 10vw;
+    }
+    #whyus{
+        height: auto;
+        overflow: hidden;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 15vh 5vw;
+    }
+    #whyus h2{
+        display: block;
+        font-size: 7.4vw;
+        width: 100%;
+        text-align: center;
+    }
+    #whyus p{
+        display: block;
+        font-size: 4.2vw;
+        width: 100%;
+        text-align: center;
+    }
+    #whyus p i{
+        margin-right: 5vw;
+    }
+    #order .rows{
+        flex-direction: column;
+    }
+    #order h2{
+        font-size: 7.4vw;
+    }
+    #order p{
+        font-size: 4.2vw;
+        display: block;
+        width: 100%;
+    }
+    #order .container h3{
+        font-size: 4.2vw;
+    }
+    #order .container input[type=text]{
+        font-size: 4.2vw;
+        min-height: 7vw;
+        min-width: 100%;
+        border-bottom: #3f90ff 0.6vw solid;
+    }
+    .button{
+        font-size: 4.2vw;
+    }
+    footer{
+        overflow: hidden;
+        font-size: 4.2vw;
+    }
+    footer .rows .row .links a{
+        font-size: 7vw;
+    }
+}
