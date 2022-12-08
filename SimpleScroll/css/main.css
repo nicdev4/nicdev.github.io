@@ -1,0 +1,52 @@
+body{
+    margin: 0;
+    font-family: Arial;
+}
+.container{
+    width: 80vw;
+    padding: 10vw;
+}
+.container .item{
+    width: 100%;
+    height: auto;
+    min-height: 25vw;
+    box-sizing: border-box;
+    padding: 5vw;
+    display: flex;
+    flex-direction: column;
+}
+.container .item b{
+    font-size: 2.4vw;
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.container .item p{
+    font-size: 1.2vw;
+    display: block;
+    width: 100%;
+    margin: auto;
+}
+.container .item a{
+    font-size: 1.2vw;
+    color: inherit;
+    text-decoration: inherit;
+}
+.container .item a{
+    font-size: 2.4vw;
+    color: inherit;
+    text-decoration: inherit;
+    margin: auto;
+}
+.container .item.red{
+    background: #f2afa0;
+    color: red;
+}
+.container .item.green{
+    background: #a0f2a1;
+    color: #008112;
+}
+.container .item.blue{
+    background: #a0a7f2;
+    color: #001ab4;
+}
