@@ -1,20 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>@valf2k3's Website</title>
-    <link type="text/css" rel="stylesheet" href="css/main.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-</head>
-<body>
-    <header>
-        <div class="content">
-            <h1>Привет, я Николай</h1>
-            <p>Я - веб-разработчик, работаю в сфере уже более 5 лет. Этот веб-сайт создан чисто на приколе, для себя, и не является частью моего портфолио.</p>
-            <a href="#skills" class="button locked">В разработке</a>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Simple API for show items on scroll</title>
+        <link type="text/css" rel="stylesheet" href="scrollApi.css"/>
+        <link type="text/css" rel="stylesheet" href="css/main.css"/>
+    </head>
+    <body>
+        <script type="text/javascript" src="scrollApi.js"></script>
+        <div class="container">
+            <div class="item red">
+                <b>Simple Scroll<p>For small projects</p></b>
+            </div>
+            <div class="item green">
+                <b>Simple for use<p>Does not require special knowledge</p></b>
+            </div>
+            <div class="item blue">
+                <a href="https://github.com/valf2k3/SimpleScroll">Download</a>
+            </div>
         </div>
-    </header>
-</body>
-</html>
+        <script type="text/javascript">
+            let sa = new scrollApi({'time': 1500});
+            let items = document.getElementsByClassName("item");
+            for(let i = 0; i < items.length; i++){
+                sa.addElement(items[i]);
+            }
+            sa.init();
+        </script>
+    </body>
+    </html>
