@@ -6,6 +6,7 @@
     <link rel="icon" type="image/png" href="images/logo.png"/>
     <link type="text/css" rel="stylesheet" href="css/main.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="spoiler.js" type="text/javascript" ></script>
     <meta name="viewport" content="width=device-width; initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,19 +14,13 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script type="text/javascript" src=""></script>
 </head>
 <body>
     <script>
-        let spoiler = Spoiler();
+        let spoiler = new Spoiler();
         AOS.init({
             once: true,
         });
-        function o(cl) {
-            el1 = $('#'+cl);
-            el1.toggleClass("hidden");
-            el1.toggleClass("opened");
-        }
     </script>
     <nav id="nav">
         <b>LSPD памятка</b>
@@ -118,41 +113,62 @@
                             <div class="row w100">
                                 <p>Не прочитали Миранду или неправильно прочитал Миранду</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Если задержан гос. служащий,  не вызвали прокурора и начальство</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не реализовали права (адвокат, звонок, частная беседа с адвокатом)</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Допрос превысил 40 минут</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не передали видеофиксацию начальству задержанного, если он гос. сотрудник</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не ознакомили адвоката с материалами дела, в т.ч. не показали видеофиксацию</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не огласили задержанному статьи с расшифровкой</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не реализовали процедуру выхода под залог</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Временная длительность процесса задержания превысила 45 минут</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Не подтвердилось подозрение в совершении преступления</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>За нарушение не предусмотрено меры пресечения в виде заключения под стражу</p>
                             </div>
+                        </div>
+                        <div class="line">
                             <div class="row w100">
                                 <p>Отсутствуют доказательства совершения преступления</p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </div>
