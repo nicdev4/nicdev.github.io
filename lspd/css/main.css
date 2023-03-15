@@ -248,6 +248,9 @@ button.little{
 .table .line .row.w70{
     width: 70%;
 }
+.table .line .row.w100{
+    width: 100%;
+}
 .ul{
     display: flex;
     flex-direction: row;
