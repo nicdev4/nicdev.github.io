@@ -49,7 +49,7 @@
             <p>Представляем для вас упрощённую памятку для правоохранительных органов с поиском по статьям УК, АК и ДК.</p>
             <div class="line" style="margin-top: 0.8vw"><a class="button" href="#proc">Читать далее</a> <text id="authors">By Patrick Wainwright</text></div>
             <script>
-                let authors = ['Patrick Crocky', 'Asap Crocky', 'Chaos Wainwright', 'Ryan Clapton', 'Kudaibergen Mamurov'];
+                let authors = ['Patrick Crocky', 'Kelly Crocky', 'Ganger Bragelonne'];
                 let i = 0;
                 window.setInterval(function () {
                     document.getElementById("authors").innerHTML = "By "+authors[i];
@@ -88,9 +88,10 @@
                         <div class="li"><div class="icon"><b>4</b></div> <text class="text">Проверить документы и свериться с фотороботом.</text></div>
                         <div class="li"><div class="icon"><b>5</b></div> <text class="text">Посадить в машину и доставить в КПЗ.</text></div>
                         <div class="li"><div class="icon"><b>6</b></div> <text class="text">Прочитать Миранду</text></div>
-                        <div class="li"><div class="icon"><b>7</b></div> <text class="text">Реализовать права (адвокат, звонок, частная беседа с адвокатом).</text></div>
-                        <div class="li"><div class="icon"><b>8</b></div> <text class="text">Первичный обыск (без изъятия). Допрос (при необходимости, адвокат обязателен).</text></div>
-                        <div class="li"><div class="icon"><b>9</b></div> <text class="text">Обновить розыск, огласить за что задержан (обязательно с расшифровкой), сфоткать и посадить в КПЗ. Оформить датабейз в течении 10 минут.</text></div>
+                        <div class="li"><div class="icon"><b>7</b></div> <text class="text">Первичный обыск (без изъятия). Допрос (при необходимости, адвокат обязателен).</text></div>
+                        <div class="li"><div class="icon"><b>8</b></div> <text class="text">Реализовать права (адвокат, звонок, частная беседа с адвокатом).</text></div>
+                        <div class="li"><div class="icon"><b>9</b></div> <text class="text">Вторичный розыск (изъять весь нелегал).</text></div>
+                        <div class="li"><div class="icon"><b>10</b></div> <text class="text">Обновить розыск, огласить за что задержан (обязательно с расшифровкой), сфоткать и посадить в КПЗ. Оформить датабейз в течении 10 минут.</text></div>
 
                     </div>
                 </div>
@@ -98,7 +99,27 @@
             <script>
                 spoiler.add('codes_button', 'codes');
                 spoiler.add('gone_button', 'gone');
+                spoiler.add('miranda_button', 'miranda');
             </script>
+            <button style="margin-top: 8.5vw;" class="little" id="miranda_button">Спойлер: Правило миранды</button>
+            <div id="miranda" class="section-ns">
+                <div class="line">
+                    <h2>Правило Миранды</h2>
+                    <div class="table">
+                        <div class="line head">
+                            <div class="row w100">
+                                <p>Полное правило Миранды</p>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <div class="row w100">
+                                <p>"Вы имеете право хранить молчание. Всё, что вы скажите, может и будет использовано против вас в суде. Вы имеете право на частного адвоката. Если у Вас нет средств на частного адвоката, он будет предоставлен Вам государством. Ваш адвокат может присутствовать до, во время, и после допроса. Также вы имеете право на использование телефона длительностью до 5 минут. Вам ясны ваши права?"</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
             <button style="margin-top: 8.5vw;" class="little" id="gone_button">Спойлер: основания для выпуска</button>
             <div id="gone" class="section-ns">
                 <div class="line">
