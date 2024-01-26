@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Николай</title>
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+    <link type="text/css" rel="stylesheet" href="css/contents.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+</head>
+<body>
+    <div class="base">
+        <header id="navbar">
+            <div class="container">
+                <div class="col logo">
+                <span>
+                    NIC <b>DEV</b>
+                </span>
+                </div>
+                <div class="col buttons">
+                    <a href="#portfolio">Мои работы</a>
+                </div>
+            </div>
+        </header>
+        <script type="text/javascript">
+            let navbar = document.getElementById('navbar');
+            window.addEventListener('scroll', (e) => {
+               if(window.scrollY > 0){
+                   if(!navbar.classList.contains('hide')) navbar.classList.add('hide');
+               }  else {
+                   if(navbar.classList.contains('hide')) navbar.classList.remove('hide');
+               }
+            });
+        </script>
+        <div class="content" id="main">
+            <div class="container">
+                <div class="col text">
+                    <div class="vertical">
+                        <h1>Привет, меня зовут Николай</h1>
+                        <p>Мне 19 лет. Я фронтенд-разработчик & дизайнер.</p>
+                        <a class="btn black" href="#portfolio">Мои работы</a>
+                    </div>
+                </div>
+                <div class="col image">
+                    <img src="images/main-bg.svg"/>
+                </div>
+            </div>
+        </div>
+        <div class="content p" id="portfolio">
+            <div class="container">
+                <h2>Мои работы</h2>
+                <div class="cases">
+                    <div class="case">
+                        <img src="images/chinacarlink.png"/>
+                        <div class="info">
+                            <h3>autochina.by</h3>
+                            <a class="btn black" href="https://autochina.by/">Перейти</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="content p" id="contact">
+            <div class="container">
+                <h2>Контакты</h2>
+                <div class="buttons">
+                    <a class="btn black" href="mailto://work@nicdev.space">Почта</a>
+                    <a class="btn black" href="https://t.me/nicdeveloper" target="_blank">Telegram</a>
+                    <a class="btn black" href="https://github.com/nicdev4" target="_blank">Github</a>
+                    <a class="btn black" href="https://www.linkedin.com/in/nicdev4" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

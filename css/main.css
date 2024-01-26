@@ -1,0 +1,134 @@
+html{
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+}
+p, text, span, a, button, .btn{
+    font-size: 20px;
+}
+.base{
+    display: flex;
+    flex-direction: column;
+}
+div.content{
+    width: 100%;
+    min-width: 600px;
+    display: flex;
+    height: auto;
+}
+div.content.p .container{
+    padding-top: 36px;
+    padding-bottom: 36px;
+}
+div.content .container{
+    min-width: 1000px;
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header .container{
+    width: 1000px;
+    margin: auto;
+    height: 80px;
+    display: flex;
+}
+header{
+    width: 100%;
+    min-width: 1000px;
+    display: flex;
+    height: 80px;
+    position: fixed;
+    z-index: 900;
+    margin-top: 0;
+    transition: 0.2s margin-top;
+}
+header.hide{
+    margin-top: -80px;
+}
+header .container .col{
+    display: flex;
+    width: 100%;
+    height: 80px;
+}
+header .container .col.logo{
+    margin: auto auto auto 0;
+    display: flex;
+    flex-direction: row;
+}
+header .container .col.logo span{
+    margin: auto auto auto 0;
+    font-weight: 600;
+}
+header .container .col.logo span b{
+    opacity: 0.45;
+    font-weight: 800;
+}
+header .container .col.buttons{
+    margin: auto 0 auto auto;
+    display: flex;
+    flex-direction: row;
+}
+header .container .col.buttons a{
+    margin: auto 0 auto auto;
+    color: black;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 480px) {
+    div.content{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    div.content .container{
+        min-width: 80%;
+        max-width: 80%;
+    }
+    header{
+        width: 100%;
+        max-width: 100%;
+        min-width: 100%;
+    }
+    header .container{
+        min-width: 80%;
+        height: 80px;
+        display: flex;
+    }
+    header .container .col.buttons{
+        display: none;
+    }
+    header .container .col.logo{
+        margin: auto;
+        width: 80%;
+    }
+    header .container .col.logo span{
+        margin: auto;
+    }
+}
+@media screen and (max-width: 1240px) {
+    div.content{
+        max-width: 100%;
+        min-width: 100%;
+    }
+    div.content .container{
+        min-width: 90%;
+        max-width: 90%;
+    }
+    header{
+        width: 100%;
+        min-width: 100%;
+        max-width: 100%;
+        display: flex;
+        height: 80px;
+        position: fixed;
+    }
+    header .container{
+        margin: auto;
+        min-width: 90%;
+        max-width: 90%;
+    }
+}
